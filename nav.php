@@ -7,12 +7,12 @@
 include 'dbconnect.php';
 
 if (isset($_SESSION['username'])) :
-    // Your code for the case when the user is logged in goes here
+    // if logged in
 ?>
     <nav>
         <div><a href="#">Home</a></div>
         <div><a href="addRecipe.php">Add recipe</a></div>
-        <div><a href="registration.php">Profile</a></div>
+        <div><a href="profile.php">Profile</a></div>
         <div><a href="logout.php">Logout</a></div>
     </nav>
 <?php else: ?>
