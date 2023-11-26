@@ -1,0 +1,9 @@
+.content {
+  margin-top: 40px;
+  padding: 20px;
+}
+.food {
+  border: 5px solid black;
+  height: 50px;
+  width: 50px;
+}
