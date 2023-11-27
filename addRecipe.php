@@ -43,7 +43,7 @@
                 if (move_uploaded_file($temp, $folder)) {
                     // echo "file moved";
 
-                    //insert data into database
+                    //insert data into database.
                     $sql = "INSERT INTO `recipes` (`title`, `ingredients`, `methods`, `category`, `image`) VALUES ('$name', '$ingredients', '$methods', '$category', '$folder')";
 
 
