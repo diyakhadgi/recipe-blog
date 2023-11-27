@@ -41,14 +41,14 @@
             $folder = './images/' .$file;
 
                 if (move_uploaded_file($temp, $folder)) {
-                    echo "file moved";
+                    // echo "file moved";
 
                     //insert data into database
                     $sql = "INSERT INTO `recipes` (`title`, `ingredients`, `methods`, `category`, `image`) VALUES ('$name', '$ingredients', '$methods', '$category', '$folder')";
 
 
                     if (mysqli_query($conn, $sql)) {
-                        echo " svaed";
+                        header("location: http://localhost/semproject/display.php ");
                     } else {
                         echo "error in saving";
                     }
