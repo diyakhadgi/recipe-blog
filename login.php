@@ -12,6 +12,7 @@
         if($num > 0) {
             $_SESSION['username'] = $username;
             header("Location: http://localhost/semproject/display.php");
+            exit();
         } else {
             echo "Login failed";
         }
