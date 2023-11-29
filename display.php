@@ -7,6 +7,7 @@
 <?php
     include 'nav.php';
 ?>
+
 </div>
 <?php
 include 'dbconnect.php';
@@ -14,10 +15,7 @@ include 'dbconnect.php';
 session_start();
 if (isset($_SESSION['username']))
 {
-    //check for session if session exists then put a value in a variable 
-    //otherwise dont
-    //to display the button first check if the value is stored in the variable 
-    //or not. if the value is stored then display button. otherwise dont
+    //check if session is available or not
     $var = 1;
 }
 else {
@@ -29,6 +27,17 @@ if ($var == 1) {
 }
 else {
     include 'nav.php';
+}
+$username = $_SESSION['username'];
+$sql1 = "SELECT user_id FROM users WHERE username = '$username'";
+$result1 = mysqli_query($conn, $sql1);
+$num = mysqli_num_rows($result1);
+if($num > 0) {
+    while($row = mysqli_fetch_assoc($result1)) {
+        // $num1 = $row['user_id'];
+        echo $row['user_id'];
+    }
+    
 }
 
 $sql = "SELECT * FROM recipes";
@@ -42,6 +51,9 @@ if ($result) {
         echo "<p><strong>Category:</strong> " . $row['category'] . "</p>";
         
         echo '<img src="' . $row['image'] . '" class="food" alt="Image">';
+        
+        echo '<a href="edit.php?update='.$row["user_id"].'" class="edit">Edit</a>
+        </div>';
             
         echo "<hr>"; 
 
@@ -49,11 +61,4 @@ if ($result) {
 
 }
 
-
 ?>
-
-
-<html>
-    <a href="addRecipe.php"><button>Add your recipe</button></a>
-    <a href="logout.php"><button>Logout</button></a>
-</html>
