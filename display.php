@@ -51,7 +51,7 @@ if ($result) {
         echo "<p><strong>Category:</strong> " . $row['category'] . "</p>";
         
         echo '<img src="' . $row['image'] . '" class="food" alt="Image">';
-        
+        //Edit page
         echo '<a href="edit.php?update='.$row["user_id"].'" class="edit">Edit</a>
         </div>';
             
