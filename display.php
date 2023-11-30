@@ -46,6 +46,7 @@ $result = mysqli_query($conn, $sql);
 
 if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
+        // display 
         echo $row['title']; 
         echo "<p><strong>Ingredients:</strong> " . $row['ingredients'] . "</p>";
         echo "<p><strong>Methods:</strong> " . $row['methods'] . "</p>";
@@ -53,8 +54,6 @@ if ($result) {
         
         echo '<img src="' . $row['image'] . '" class="food" alt="Image">';
         echo "</br>";
-        
-    
 
 ?>
 <a href="edit.php?edit='<?php echo $row['recipe_id']?>'">
