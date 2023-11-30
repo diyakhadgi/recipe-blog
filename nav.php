@@ -7,7 +7,11 @@
 include 'dbconnect.php';
 
 if (isset($_SESSION['username'])) :
+<<<<<<< HEAD
     // if logged in here
+=======
+    // if logged in 
+>>>>>>> 32927acd48861bbad3a3e18c26ae6e1342a1503d
 ?>
     <nav>
         <div><a href="#">Home</a></div>
