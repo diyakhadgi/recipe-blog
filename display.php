@@ -28,18 +28,18 @@ if ($var == 1) {
 else {
     include 'nav.php';
 }
-$username = $_SESSION['username'];
-// echo $username;
-$sql1 = "SELECT user_id FROM users WHERE username = '$username'";
-$result1 = mysqli_query($conn, $sql1);
-$num = mysqli_num_rows($result1);
-if($num > 0) {
-    while($row = mysqli_fetch_assoc($result1)) {
-        // $num1 = $row['user_id'];
-        // echo $row['user_id'];
-    }
+// $username = $_SESSION['username'];
+// // echo $username;
+// $sql1 = "SELECT user_id FROM users WHERE username = '$username'";
+// $result1 = mysqli_query($conn, $sql1);
+// $num = mysqli_num_rows($result1);
+// if($num > 0) {
+//     while($row = mysqli_fetch_assoc($result1)) {
+//         // $num1 = $row['user_id'];
+//         // echo $row['user_id'];
+//     }
     
-}
+// }
 
 $sql = "SELECT * FROM recipes";
 $result = mysqli_query($conn, $sql);

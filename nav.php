@@ -7,11 +7,7 @@
 include 'dbconnect.php';
 
 if (isset($_SESSION['username'])) :
-<<<<<<< HEAD
-    // if logged in here
-=======
-    // if logged in 
->>>>>>> 32927acd48861bbad3a3e18c26ae6e1342a1503d
+    // Your code for the case when the user is logged in goes here
 ?>
     <nav>
         <div><a href="#">Home</a></div>
@@ -24,10 +20,10 @@ if (isset($_SESSION['username'])) :
         <div><a href="#">Home</a></div>
         <div><a href="login.php">Login</a></div>
         <div><a href="addRecipe.php">Add recipe</a></div>
-        
+
     </nav>
 <?php endif; ?>
 
-        
+
     </body>
 </html>
