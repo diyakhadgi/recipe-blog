@@ -1,21 +1,5 @@
 <?php
 include 'dbconnect.php';
-$user_id = $_GET['user_id'];
-$sql1 = "SELECT * FROM users WHERE `password` = '$password'";
-$result1 = mysqli_query($conn, $sql1);
-
-if ($result1) {
-    while ($row = mysqli_fetch_assoc($result1)) {
-       
-    }
-   
-}
-
-?>
-
-<?php
-
-include 'dbconnect.php';
 session_start();
 $user_id = $_GET['user_id'];
 $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
